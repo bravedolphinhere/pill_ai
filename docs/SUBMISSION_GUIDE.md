@@ -1,11 +1,11 @@
 # 제출 자료와 PDF 재생성
 
-2026-11-05 기준, 학습·평가·Recall 분석을 요약한 5페이지 PDF를 준비했다.
+2026-11-05 기준, 탐지니 MVP·학습·평가·Recall 분석을 요약한6페이지 PDF를 준비했다.
 
-- 제출 PDF: [pill_ai_final_report.pdf](../output/pdf/pill_ai_final_report.pdf)
+- 제출 PDF: [tamgenie_final_report.pdf](../output/pdf/tamgenie_final_report.pdf)
 - 상세 실험 근거: [베이스라인](FINAL_REPORT.md), [Recall 분석](RECALL_ANALYSIS.md)
 - PDF 생성 코드: [build_submission_pdf.py](build_submission_pdf.py)
-- 자동 확인 기록: [submission_checks.json](../output/pdf/submission_checks.json)
+- 자동 확인 기록: [tamgenie_final_report_checks.json](../output/pdf/tamgenie_final_report_checks.json)
 
 PDF는 원본 사진을 포함하지 않고 집계 표와 벡터 그래프를 사용한다.
 원본 데이터·기존 가중치·평가를 보존하고 추가 학습 없이 생성했다.
@@ -26,7 +26,7 @@ uv run --no-project --python 3.14 --with reportlab --with pymupdf python -m docs
 ReportLab과 PyMuPDF는 개발 의존성에 기록했다.
 위 명령은 PDF용 패키지를 격리 실행해 기존 GPU 학습 환경을 교체하지 않는다.
 출력은 `output/pdf/`, 시각 검사용 임시 PNG는 `tmp/pdfs/`에 생성한다.
-생성 코드는 집계 CSV/JSON의 표본 수, 주요 지표, 5페이지 구성과 상대 링크를 확인한다.
+생성 코드는 집계 CSV/JSON의 표본 수, 주요 지표,6페이지 구성과 상대 링크를 확인한다.
 다시 생성한 PDF도 페이지별 시각 검수를 거쳐 제출한다.
 
 ## 남은 작업

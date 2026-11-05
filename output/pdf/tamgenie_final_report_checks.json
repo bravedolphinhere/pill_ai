@@ -1,0 +1,194 @@
+{
+  "pages": 6,
+  "sha256": "08cec34b789496052254250e613b5f7093d55097dee0f984a7836a3ade3aae72",
+  "bytes": 112892,
+  "pdf_links": 8,
+  "source_metrics_sha256": "bddd8a217fa8e1e980516cb8f1c2affa121e4afa2e366d5894b553049c9051df",
+  "source_thresholds_sha256": "b7781124d4f64381f5e0ff7719b0daad860885a723d85aab283b66cd27a78821",
+  "builder_sha256": "17e7dc40ecba8a0741ef0b36c38b03daab11fb87004857d43c0cd3baa7da87fe",
+  "local_links": {
+    "checked": [
+      {
+        "document": "README.md",
+        "target": "docs/TAMGENIE_MVP.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/TAMGENIE_MVP.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/TAMGENIE_TEST_REPORT.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/FINAL_REPORT.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/YOLO11N_PREFLIGHT.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/FINAL_REPORT.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "output/pdf/tamgenie_final_report.pdf",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/SUBMISSION_GUIDE.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/results/yolo11n_20261105/per_class_metrics.csv",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/RECALL_ANALYSIS.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/DATA_QA_DESIGN.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "notebooks/01_internal_data_eda.ipynb",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "notebooks/02_external_data_eda.ipynb",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/CODE_CONVENTION.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/GIT_CONVENTION.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "data/README.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "AGENTS.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/CODE_CONVENTION.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/GIT_CONVENTION.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": ".github/PULL_REQUEST_TEMPLATE.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "AGENTS.md",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "TAMGENIE_MVP.md",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "TAMGENIE_TEST_REPORT.md",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "RECALL_ANALYSIS.md",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "results/yolo11n_20261105/training_curves.png",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "results/yolo11n_20261105/confusion_matrix_compact.png",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "results/yolo11n_20261105/class_map.csv",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "results/yolo11n_20261105/metrics.json",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "results/yolo11n_20261105/per_class_metrics.csv",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "results/yolo11n_20261105/training_config.yaml",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "results/yolo11n_20261105/provenance.json",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "../README.md",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "YOLO11N_PREFLIGHT.md",
+        "exists": true
+      },
+      {
+        "document": "docs/RECALL_ANALYSIS.md",
+        "target": "FINAL_REPORT.md",
+        "exists": true
+      },
+      {
+        "document": "docs/RECALL_ANALYSIS.md",
+        "target": "results/recall_20261105_final/threshold_tradeoff.png",
+        "exists": true
+      },
+      {
+        "document": "docs/RECALL_ANALYSIS.md",
+        "target": "results/recall_20261105_final/correct_confidence.png",
+        "exists": true
+      }
+    ],
+    "missing": []
+  }
+}

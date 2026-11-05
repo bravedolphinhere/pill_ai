@@ -199,9 +199,14 @@ def build(root: Path, output: Path, font: Path) -> dict:
         url = f"{REPO}/blob/{BRANCH}/{relative}"
         paragraph(f'<link href="{url}" color="#087F8C">{escape(label)}</link>', "SmallKo")
 
-    paragraph("개인 알약 객체 탐지 프로젝트", "TitleKo")
-    paragraph("내부 데이터 EDA · 라벨 QA · YOLO11n 베이스라인 · Recall 분석", "HeadingKo")
+    paragraph("탐지니 · TamGenie", "TitleKo")
+    paragraph("다단계 AI 기반 알약 탐지 및 식별 보조 시스템", "HeadingKo")
     paragraph("최종 제출용 요약 보고서 | 2026-11-05 | bravedolphinhere / pill_ai", "SmallKo")
+    paragraph(
+        "기존 내부56종 YOLO11n을 Streamlit MVP에 연결했다. "
+        "1~5쪽은 기존 모델 실험,6쪽은 서비스 구현·실행 검사다. "
+        "약품 정체나 복용 여부를 확정하는 서비스가 아니다."
+    )
     heading("1. 무엇을 했는가")
     paragraph(
         "알약 사진에서 위치와 제품 클래스를 함께 찾는 첫 기준 모델을 만들었다. "
@@ -462,6 +467,58 @@ def build(root: Path, output: Path, font: Path) -> dict:
         "SmallKo",
     )
 
+    story.append(PageBreak())
+    heading("11. 탐지니 Streamlit MVP")
+    table(
+        ["단계", "실제 상태"],
+        [
+            ["1차 YOLO11n", "기존56종 best.pt 실제 추론, 여러 bbox·모델 점수·개별 Crop 표시"],
+            ["추가 확인", "낮은 점수·Crop 품질 우려·같은 위치의 다른 클래스 겹침을 분기"],
+            ["2차 EfficientNet-B0", "미구현. 학습 가중치가 없어 명시적으로 건너뜀"],
+            ["3차 질문", "구분 가능한 검증 속성이 있을 때만 질문. 모름과 정보 미확보 후보 유지"],
+            ["최종 표시", "참고 후보와 근거, 정보 부족·후보 없음·확인 중단 시 식별 불가"],
+        ],
+        [125, 355],
+    )
+    paragraph(
+        "현재 공식 제품 설명과 대조한 속성은56종 중2종의 모양·색상 일부다. "
+        "나머지54종을 임의로 제거하지 않아 질문 후에도 식별 불가일 수 있다. "
+        "각인·분할선은 양면의 검증 정보가 부족해 현재 질문하지 않는다. "
+        "모델 점수·일치 여부를 실제 정답 확률이나 약품 정체 확정으로 바꾸지 않는다."
+    )
+    heading("12. 실제 기능 검사")
+    table(
+        ["검사", "결과"],
+        [
+            ["단위 테스트", "불확실성·모름·출처 없는 속성·손상 입력 등11개 통과"],
+            ["실제 모델 AppTest", "기존 검증 사진에서4박스·Crop·질문4개 렌더링, 앱 예외0건"],
+            ["상태·오류", "모름 적용, 손상 이미지 거절, 새 업로드 시 이전 분석 제거"],
+            ["HTTP 실행", "로컬 앱 / 와 /_stcore/health 모두200"],
+            ["브라우저 육안 검수", "현재 URL을 확인할 수 없는 도구 제한으로 미완료"],
+        ],
+        [125, 355],
+    )
+    paragraph(
+        "AppTest는 업로드 반환값만 주입한 뒤 실제 앱·기존 가중치·GPU 추론을 사용했다. "
+        "브라우저 파일 선택 창의 자동화나 모바일·부하 검사는 아니다. "
+        "검출4개는 실제 알약4개나 정답4개라는 뜻이 아니며, "
+        "한 사진으로 앱 정확도를 측정하지 않았다.",
+        "SmallKo",
+    )
+    heading("13. 실행과 미완료 작업")
+    paragraph(
+        "패키지와 식별자는 tamgenie, 진입점은 app.py다. "
+        "Streamlit1.66.1과 기존 Python3.14/cu130 환경을 별도 uv 환경으로 재사용했다. "
+        "가중치는 TAMGENIE_WEIGHTS로 연결하며 기존 경로와 저장소 이름은 변경하지 않았다."
+    )
+    link("MVP 실행 명령과 메타데이터 출처·한계", "docs/TAMGENIE_MVP.md")
+    link("실제 테스트 상세와 재현 방법", "docs/TAMGENIE_TEST_REPORT.md")
+    paragraph(
+        "외부118종 정제는 별도 작업이며 이 앱에 새 모델로 반영하지 않았다. "
+        "EfficientNet-B0 학습, 완전한 약품 카탈로그, 점수 보정, 학습 범위 밖 입력 판별은 "
+        "이후 검증 과제다. 새 학습이나 원본·기존 가중치 변경 없이 MVP를 만들었다.",
+        "SmallKo",
+    )
     output.parent.mkdir(parents=True, exist_ok=True)
     document = SimpleDocTemplate(
         str(output),
@@ -470,7 +527,7 @@ def build(root: Path, output: Path, font: Path) -> dict:
         rightMargin=57,
         topMargin=48,
         bottomMargin=45,
-        title="알약 객체 탐지 YOLO11n 베이스라인 및 Recall 분석",
+        title="TamGenie: 다단계 AI 기반 알약 탐지 및 식별 보조 시스템",
         author="bravedolphinhere",
     )
 
@@ -478,7 +535,7 @@ def build(root: Path, output: Path, font: Path) -> dict:
         canvas.saveState()
         canvas.setFont("Korean", 8)
         canvas.setFillColor(GRAY)
-        canvas.drawString(57, 25, "pill_ai | 2026-11-05 | 개발용 validation 결과")
+        canvas.drawString(57, 25, "TamGenie | 2026-11-05 | 식별 보조 MVP · 개발용 validation")
         canvas.drawRightString(A4[0] - 57, 25, str(document.page))
         canvas.restoreState()
 
@@ -486,7 +543,7 @@ def build(root: Path, output: Path, font: Path) -> dict:
     preview = root / "tmp/pdfs/submission_preview"
     preview.mkdir(parents=True, exist_ok=True)
     with pymupdf.open(output) as pdf:
-        assert len(pdf) == 5, f"예상5페이지와 실제{len(pdf)}페이지가 다릅니다."
+        assert len(pdf) == 6, f"예상6페이지와 실제{len(pdf)}페이지가 다릅니다."
         extracted = "\n".join(page.get_text() for page in pdf)
         assert "자누비아" in extracted and "0.7375" in extracted and "0.6886" in extracted
         for index, page in enumerate(pdf):
@@ -504,7 +561,7 @@ def build(root: Path, output: Path, font: Path) -> dict:
             "local_links": local_links(root),
         }
     assert not result["local_links"]["missing"]
-    (output.parent / "submission_checks.json").write_text(
+    (output.parent / f"{output.stem}_checks.json").write_text(
         json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     return result
@@ -515,7 +572,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--font", type=Path, required=True)
     parser.add_argument(
-        "--output", type=Path, default=PROJECT_ROOT / "output/pdf/pill_ai_final_report.pdf"
+        "--output", type=Path, default=PROJECT_ROOT / "output/pdf/tamgenie_final_report.pdf"
     )
     args = parser.parse_args()
     print(json.dumps(build(PROJECT_ROOT, args.output, args.font), ensure_ascii=False, indent=2))

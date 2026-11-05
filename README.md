@@ -1,9 +1,42 @@
-# pillbbox
+# TamGenie: 다단계 AI 기반 알약 탐지 및 식별 보조 시스템
 
-알약 이미지에서 알약의 위치(bbox)와 종류를 검출하는 프로젝트입니다.
+**탐지니(TamGenie)** 는 여러 알약의 위치와 참고 후보를 표시하는 Streamlit MVP입니다.
+모델 점수는 정답 확률이 아니며 약품 정체나 복용 여부를 확정하지 않습니다.
+
+## 웹앱 실행
+
+이미 동작하는 Python3.14/cu130 GPU 환경을 재사용하는 이 PC의 실행 방법입니다.
+
+```powershell
+uv venv --system-site-packages --python 3.14 .venv-tamgenie
+$env:VIRTUAL_ENV = "$PWD/.venv-tamgenie"
+uv sync --project configs/mvp --active
+$env:TAMGENIE_WEIGHTS = "C:/pill_ai/outputs/yolo11n_baseline_20261105_run2/best.pt"
+uv run --no-project --python .venv-tamgenie/Scripts/python.exe python -m streamlit run app.py
+```
+
+브라우저: **http://127.0.0.1:8501**. 가중치 경로는 해당 PC의 실제 값으로 지정합니다.
+이미 환경이 있다면 마지막 실행 명령만 사용하면 됩니다.
+다른 PC의 GPU 환경은 [실행 안내](docs/TAMGENIE_MVP.md)를 먼저 확인하세요.
+
+| 단계 | 구현 상태 |
+|---|---|
+| YOLO11n | 기존56종 best.pt로 실제 추론·bbox·개별 Crop |
+| 신뢰도·품질 검사 | 임시 점수·크기·밝기·윤곽·중복 클래스 우려로 추가 확인 분기 |
+| EfficientNet-B0 | **미구현**. 학습 가중치가 없어 명시적으로 건너뜀 |
+| Interactive Identification | 검증된 차이만 질문, 모름 허용, 정보 부족 시 식별 불가 |
+
+질문용 출처 대조 속성은 현재56종 중2종의 모양·색상 일부입니다.
+없는 정보를 생성하거나 나머지54종을 임의로 제외하지 않습니다.
+
+- [MVP 구조·실행·메타데이터 한계](docs/TAMGENIE_MVP.md)
+- [실제 테스트 결과](docs/TAMGENIE_TEST_REPORT.md)
+- [최종 보고서](docs/FINAL_REPORT.md)
+
+## 기존 탐지 실험
 
 - 입력: 알약 촬영 이미지 / 출력: 알약별 bbox와 클래스
-- 모델: 미정. 여러 모델을 실험해 본 뒤 확정합니다.
+- 현재 서비스1차 모델: YOLO11n. 기존 실험 코드·가중치·데이터 경로는 보존합니다.
 - 실험 기록: [wandb](#실험-기록-wandb)
 
 ## 개인 제출용 YOLO11n 베이스라인
@@ -23,7 +56,7 @@ PASS는 구조 검사 통과 후보이며 약품 정체의 정확성 보증이 �
 
 - [환경·데이터 구조 검사 결과](docs/YOLO11N_PREFLIGHT.md)
 - [최종 보고서: 실제 학습·평가 결과와 한계](docs/FINAL_REPORT.md)
-- [제출용 PDF: 베이스라인과 Recall 분석 요약](output/pdf/pill_ai_final_report.pdf)
+- [제출용 PDF: 탐지니 MVP·베이스라인·Recall 분석](output/pdf/tamgenie_final_report.pdf)
 - [제출 자료 확인과 PDF 재생성 방법](docs/SUBMISSION_GUIDE.md)
 - [클래스별 평가 지표](docs/results/yolo11n_20261105/per_class_metrics.csv)
 - [Confidence 5종 비교와 저성능 클래스 원인 분석](docs/RECALL_ANALYSIS.md)
@@ -251,7 +284,9 @@ Codex, Claude Code 등 에이전트용 지침은 [AGENTS.md](AGENTS.md) 하나�
 ## 폴더 구조
 
 ```
-pillbbox/
+tamgenie/
+├── app.py              # Streamlit 진입점
+├── tamgenie/           # detector, classifier, question_engine, pipeline
 ├── data/               # 데이터 (구조: data/README.md, 이미지·annotation은 커밋 안 함)
 ├── docs/               # 컨벤션 등 문서
 ├── data_process/       # 전처리, 라벨 생성, 데이터셋 yaml 생성
