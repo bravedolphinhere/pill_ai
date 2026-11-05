@@ -1,0 +1,25 @@
+{
+  "run_id": "yolo11n_baseline_20261105_run2",
+  "packages": {
+    "torch": "2.14.0+cu130",
+    "torchvision": "0.29.0+cu130",
+    "ultralytics": "8.4.193",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "Pillow": "13.0.0",
+    "scipy": "1.18.0",
+    "faster-coco-eval": "1.8.0"
+  },
+  "weights_sha256": "ca443f82b8761d2fabf36ff2f589a744c5fde5f8710a6e8ec676e203f0aefa58",
+  "training_request_sha256": "d238337077a5e312aa2fdbaff87bf28d5a6cdaf98053cfc900e07caff91af7e8",
+  "class_map_sha256": "d3cbf966d58317d1bec8e6c4ec7b25ba5ff2ca934d983a593ba8812068fb4bb0",
+  "split_manifest_sha256": "dcb6e74c023ec14a7593b0e81392c1cb704cc16b35f89a316d39d86eb70b6ac4",
+  "source_modified": false,
+  "code_sha256": {
+    "models/train.py": "4479e296b06c7ff541e1cc90e86330fcf9b7ff336dd32c3062caa70138e9278c",
+    "models/evaluate.py": "b4aeb6e4fcdb1d38bf795bca78afc01d7a361b7c7f946e1015b91ae7fec35611",
+    "data_process/group_split.py": "141361772d5cccb77a90a112666c1e845af3268639e02ab17beb728dcfa53991",
+    "data_process/prepare_internal_baseline.py": "3591146301680cee60758bee18c2f76b0fabccf95c37654c0578e88653fb2360",
+    "data_process/verify_internal_dataset.py": "d0515783f4dff3ecc00dc58b82837a924c0b37a61e11c97b3ce19ecea9247dde"
+  }
+}

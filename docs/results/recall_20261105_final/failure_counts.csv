@@ -1,0 +1,41 @@
+﻿threshold,pill_name,failure,count
+0.05,자누비아정 50mg,Classification Failure,6
+0.05,콜리네이트연질캡슐 400mg,Classification Failure,1
+0.05,트라젠타듀오정 2.5/850mg,Classification Failure,3
+0.05,트윈스타정 40/5mg,Classification Failure,9
+0.05,플라빅스정 75mg,Classification Failure,5
+0.05,플라빅스정 75mg,TP,1
+0.1,자누비아정 50mg,Classification Failure,6
+0.1,콜리네이트연질캡슐 400mg,Classification Failure,1
+0.1,트라젠타듀오정 2.5/850mg,Classification Failure,3
+0.1,트윈스타정 40/5mg,Classification Failure,9
+0.1,플라빅스정 75mg,Classification Failure,4
+0.1,플라빅스정 75mg,Detection Failure,1
+0.1,플라빅스정 75mg,TP,1
+0.15,자누비아정 50mg,Classification Failure,5
+0.15,자누비아정 50mg,Detection Failure,1
+0.15,콜리네이트연질캡슐 400mg,Classification Failure,1
+0.15,트라젠타듀오정 2.5/850mg,Classification Failure,3
+0.15,트윈스타정 40/5mg,Classification Failure,7
+0.15,트윈스타정 40/5mg,Detection Failure,2
+0.15,플라빅스정 75mg,Classification Failure,4
+0.15,플라빅스정 75mg,Detection Failure,1
+0.15,플라빅스정 75mg,TP,1
+0.2,자누비아정 50mg,Classification Failure,4
+0.2,자누비아정 50mg,Detection Failure,2
+0.2,콜리네이트연질캡슐 400mg,Detection Failure,1
+0.2,트라젠타듀오정 2.5/850mg,Classification Failure,2
+0.2,트라젠타듀오정 2.5/850mg,Detection Failure,1
+0.2,트윈스타정 40/5mg,Classification Failure,6
+0.2,트윈스타정 40/5mg,Detection Failure,3
+0.2,플라빅스정 75mg,Classification Failure,3
+0.2,플라빅스정 75mg,Detection Failure,3
+0.25,자누비아정 50mg,Classification Failure,3
+0.25,자누비아정 50mg,Detection Failure,3
+0.25,콜리네이트연질캡슐 400mg,Detection Failure,1
+0.25,트라젠타듀오정 2.5/850mg,Classification Failure,1
+0.25,트라젠타듀오정 2.5/850mg,Detection Failure,2
+0.25,트윈스타정 40/5mg,Classification Failure,5
+0.25,트윈스타정 40/5mg,Detection Failure,4
+0.25,플라빅스정 75mg,Classification Failure,3
+0.25,플라빅스정 75mg,Detection Failure,3

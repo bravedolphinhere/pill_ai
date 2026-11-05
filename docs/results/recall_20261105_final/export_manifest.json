@@ -1,0 +1,16 @@
+{
+  "analysis_manifest_sha256": "b27a93f5d7eea1daddf3ee5a8499e3d8177cbfa8849b6db91657187bf8e1cb95",
+  "export_code_sha256": "0344c77bad69498f09a34dd5012f11ae2bdcdb0c5aefee4501dfa7a850fd8109",
+  "artifacts": {
+    "class_support.csv": "77733204e04c1b6a6a3a0575bdd8d6b3097b87c013e3b48044d270cc4bdf88f3",
+    "confusion_pairs.csv": "59f39baf487f7ce15c798f408b3e942369b911e47864468ec0832f310dbb3700",
+    "correct_confidence.png": "fa8c9a00a8e55fe51c510573c093c8b0f5e5378c9496c5c72c93227db1c62d57",
+    "correct_confidence_summary.csv": "0f5666566a13400dd8901fd5600d184d5a8a0af2c7cab66ac5dbfeea132e67ea",
+    "failure_counts.csv": "a7044fedb28bd7c99c571b451ffbe5aee1a0a075baf947b7f8de985a9b800309",
+    "learning_curve_checkpoints.csv": "1015f92890a616152ad99738980483698412ee8bfbab9ab188f4d2cb5edf0e11",
+    "prediction_confidence_summary.csv": "e6521deb4feaca790cc9a7afc56c6419aed65216a0cf5e91f2cd2c7a0c0cc909",
+    "threshold_overall.csv": "b7781124d4f64381f5e0ff7719b0daad860885a723d85aab283b66cd27a78821",
+    "threshold_per_class.csv": "2b5ad1b5e3b5b448c39a73fb53ce1355ffd5d5a39504ecae53ce7136556d758c",
+    "threshold_tradeoff.png": "68b69745eee2e75d8a5b8876582f3ad55b36e0f8a8a35098799e58e3f37fb6bb"
+  }
+}

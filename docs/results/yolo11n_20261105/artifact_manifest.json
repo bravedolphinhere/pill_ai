@@ -1,0 +1,47 @@
+[
+  {
+    "file": "class_map.csv",
+    "sha256": "d3cbf966d58317d1bec8e6c4ec7b25ba5ff2ca934d983a593ba8812068fb4bb0",
+    "bytes": 2620
+  },
+  {
+    "file": "confusion_matrix_compact.png",
+    "sha256": "3334b3b8a3559c9395d40e1220d67442641f5c46da83542636f5830681b77b25",
+    "bytes": 84151
+  },
+  {
+    "file": "confusion_matrix_full.png",
+    "sha256": "c5a76449e4772bf0fc2cb5eb683c219348c024ec6b92b8804da985f4254e065f",
+    "bytes": 604570
+  },
+  {
+    "file": "metrics.json",
+    "sha256": "bddd8a217fa8e1e980516cb8f1c2affa121e4afa2e366d5894b553049c9051df",
+    "bytes": 1139
+  },
+  {
+    "file": "per_class_metrics.csv",
+    "sha256": "fd144c4d797ad4d4f201c3de056310bc64db3f610ec83fa7b1536e1ee687c024",
+    "bytes": 4068
+  },
+  {
+    "file": "provenance.json",
+    "sha256": "8b3201b07aab581b8ed2758ba2d002d5358a1b40d6b7f5b6e2b82d60830ef01e",
+    "bytes": 1252
+  },
+  {
+    "file": "training_config.yaml",
+    "sha256": "eace213ff9df803f4916af95ceb0fc9c7b794e5e7bf56974463e1baadb5f058f",
+    "bytes": 1785
+  },
+  {
+    "file": "training_curves.png",
+    "sha256": "d7f1ba15bedc8a4dfafa0d8407b25255225e7ca41a38eca8075dcdb62d201276",
+    "bytes": 265236
+  },
+  {
+    "file": "training_history.csv",
+    "sha256": "f0e5b61ddb31ffa14bcd44473611b6c97f6a161c0dc0008f08be38a7f4e91683",
+    "bytes": 2695
+  }
+]
