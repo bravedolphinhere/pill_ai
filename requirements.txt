@@ -1,0 +1,10 @@
+# MVP 직접 의존성. 설치·실행은 README의 uv 명령을 따른다.
+# GPU에는 실제 아키텍처를 지원하는 PyTorch 빌드가 필요하다.
+streamlit==1.66.1
+ultralytics==8.4.193
+python-dotenv==1.2.4
+pi-heif==1.4.0
+Pillow==13.0.0
+numpy==2.5.4
+torch>=2.14.0
+torchvision>=0.29.0

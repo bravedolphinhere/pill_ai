@@ -1,0 +1,13 @@
+{
+  "description": "학습 JSON의 속성을 검증된 정보로 복사하지 않는다. 공식 제품 설명과 대조한 속성만 포함한다.",
+  "products": {
+    "K-022347": {
+      "shape": {"values": ["원형"], "verified": true, "checked_at": "2026-11-05", "source_url": "https://www.ckdpharm.com/product/productView.do?prodCode=CKD0000395"},
+      "color": {"values": ["밝은 베이지색"], "verified": true, "checked_at": "2026-11-05", "source_url": "https://www.ckdpharm.com/product/productView.do?prodCode=CKD0000395"}
+    },
+    "K-027733": {
+      "shape": {"values": ["타원형"], "verified": true, "checked_at": "2026-11-05", "source_url": "https://yuhan.co.kr/Products/List/?YPRD_IDX=2215&mode=view"},
+      "color": {"values": ["흰색", "연한 파란색"], "verified": true, "checked_at": "2026-11-05", "source_url": "https://yuhan.co.kr/Products/List/?YPRD_IDX=2215&mode=view"}
+    }
+  }
+}

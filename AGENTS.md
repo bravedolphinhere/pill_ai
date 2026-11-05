@@ -5,9 +5,14 @@ AI 코딩 에이전트(Codex, Claude Code 등)가 이 저장소에서 작업할 
 
 ## 프로젝트
 
+- 개인 서비스명은 탐지니(TamGenie), 패키지와 프로젝트 식별자는 `tamgenie`입니다.
+- 웹 진입점은 `app.py`, 서비스 코드는 `tamgenie/`입니다. 기존 학습·데이터 경로는 보존합니다.
+- MVP 구현 상태와 실행 환경은 `docs/TAMGENIE_MVP.md`를 따릅니다.
+- 출처 없는 속성으로 질문하거나 모델 점수를 정답 확률·확정 판정으로 표시하지 않습니다.
+
 - 알약 이미지에서 알약 위치(bbox)와 종류를 검출하는 프로젝트입니다.
-- 검출 모델은 아직 정하지 않았습니다. 여러 모델을 실험해 본 뒤 확정합니다. 특정 모델을 전제로 구조를 바꾸지 않습니다.
-- 초기 단계입니다. `data_process/`, `models/`의 `.py` 파일과 `main.py`는 아직 비어 있는 뼈대입니다. 파일 이름과 폴더 구조는 팀이 정한 것이므로 임의로 옮기거나 합치지 않습니다.
+- 개인 MVP의1차 모델은 YOLO11n입니다. 기존 모델 실험과 전처리 폴더는 유지합니다.
+- 학습·평가와 데이터 QA 코드는 구현됐고 일부 초기 뼈대 파일은 남아 있습니다. 기존 파일을 임의로 옮기거나 합치지 않습니다.
 - 사람용 문서: [README.md](README.md), 코드 규칙 [docs/CODE_CONVENTION.md](docs/CODE_CONVENTION.md), Git 규칙 [docs/GIT_CONVENTION.md](docs/GIT_CONVENTION.md), 데이터 구조 [data/README.md](data/README.md). 아래 요약과 다르면 docs가 우선입니다.
 
 ## 폴더
@@ -15,6 +20,7 @@ AI 코딩 에이전트(Codex, Claude Code 등)가 이 저장소에서 작업할 
 | 경로 | 역할 |
 |---|---|
 | `src/config.py` | 공통 설정: `PROJECT_ROOT`, `get_device()`, `init_wandb()` |
+| `app.py`, `tamgenie/` | Streamlit MVP, 탐지·질문·불확실성 처리 |
 | `data_process/` | 전처리, 라벨 생성(`make_labels.py`), 파일 이동, `data.yaml` 생성 |
 | `models/` | 학습(`train.py`), 평가(`evaluate.py`), 튜닝(`tuning.py`, optuna) |
 | `data/` | 원본 데이터. `train_images/`, `train_annotations/`(JSON), `test_images/`는 커밋되지 않음 |

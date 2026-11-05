@@ -1,0 +1,10 @@
+[project]
+name = "tamgenie"
+version = "0.1.0"
+description = "기존 GPU 라이브러리를 재사용하는 TamGenie MVP 실행 환경"
+requires-python = ">=3.14"
+dependencies = [
+    "pi-heif>=1.4.0",
+    "python-dotenv>=1.2.4",
+    "streamlit>=1.66.1",
+]

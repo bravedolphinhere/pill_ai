@@ -39,7 +39,7 @@ def init_wandb(
 
     # 기록을 시작할 때만 .env를 읽으며 이미 설정된 환경 변수가 우선한다.
     load_dotenv(PROJECT_ROOT / ".env", override=False)
-    project = os.getenv("WANDB_PROJECT", "pillbbox")
+    project = os.getenv("WANDB_PROJECT", "tamgenie")
     entity = os.getenv("WANDB_ENTITY") or None
 
     if model is not None:
