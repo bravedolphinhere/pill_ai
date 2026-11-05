@@ -252,3 +252,6 @@ outputs/
 weights/
 .venv-*/
 baseline_yolo26m_musgd/dataset/
+
+# PDF 시각 검사용 임시 페이지 이미지는 제출하지 않는다.
+/tmp/pdfs/

@@ -29,6 +29,8 @@ dependencies = [
 dev = [
     "ipykernel>=7.4.0",
     "jupyterlab>=4.6.4",
+    "pymupdf>=2.1",
+    "reportlab>=5.1.0",
     "ruff>=0.17.1",
 ]
 

@@ -1,0 +1,164 @@
+{
+  "pages": 5,
+  "sha256": "d70ad5c73548ac84ed47e3b0c12e2dded04edd83762e7e9294153a372cc82725",
+  "bytes": 103631,
+  "pdf_links": 6,
+  "source_metrics_sha256": "bddd8a217fa8e1e980516cb8f1c2affa121e4afa2e366d5894b553049c9051df",
+  "source_thresholds_sha256": "b7781124d4f64381f5e0ff7719b0daad860885a723d85aab283b66cd27a78821",
+  "builder_sha256": "806e80a3585b8d1ac83ceb91a6f4e0c8aefe849e5358928ea1bc19de79c11421",
+  "local_links": {
+    "checked": [
+      {
+        "document": "README.md",
+        "target": "docs/YOLO11N_PREFLIGHT.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/FINAL_REPORT.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "output/pdf/pill_ai_final_report.pdf",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/SUBMISSION_GUIDE.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/results/yolo11n_20261105/per_class_metrics.csv",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/RECALL_ANALYSIS.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/DATA_QA_DESIGN.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "notebooks/01_internal_data_eda.ipynb",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "notebooks/02_external_data_eda.ipynb",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/CODE_CONVENTION.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/GIT_CONVENTION.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "data/README.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "AGENTS.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/CODE_CONVENTION.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "docs/GIT_CONVENTION.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": ".github/PULL_REQUEST_TEMPLATE.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "target": "AGENTS.md",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "RECALL_ANALYSIS.md",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "results/yolo11n_20261105/training_curves.png",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "results/yolo11n_20261105/confusion_matrix_compact.png",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "results/yolo11n_20261105/class_map.csv",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "results/yolo11n_20261105/metrics.json",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "results/yolo11n_20261105/per_class_metrics.csv",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "results/yolo11n_20261105/training_config.yaml",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "results/yolo11n_20261105/provenance.json",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "../README.md",
+        "exists": true
+      },
+      {
+        "document": "docs/FINAL_REPORT.md",
+        "target": "YOLO11N_PREFLIGHT.md",
+        "exists": true
+      },
+      {
+        "document": "docs/RECALL_ANALYSIS.md",
+        "target": "FINAL_REPORT.md",
+        "exists": true
+      },
+      {
+        "document": "docs/RECALL_ANALYSIS.md",
+        "target": "results/recall_20261105_final/threshold_tradeoff.png",
+        "exists": true
+      },
+      {
+        "document": "docs/RECALL_ANALYSIS.md",
+        "target": "results/recall_20261105_final/correct_confidence.png",
+        "exists": true
+      }
+    ],
+    "missing": []
+  }
+}

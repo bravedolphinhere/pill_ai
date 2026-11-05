@@ -23,6 +23,8 @@ PASS는 구조 검사 통과 후보이며 약품 정체의 정확성 보증이 �
 
 - [환경·데이터 구조 검사 결과](docs/YOLO11N_PREFLIGHT.md)
 - [최종 보고서: 실제 학습·평가 결과와 한계](docs/FINAL_REPORT.md)
+- [제출용 PDF: 베이스라인과 Recall 분석 요약](output/pdf/pill_ai_final_report.pdf)
+- [제출 자료 확인과 PDF 재생성 방법](docs/SUBMISSION_GUIDE.md)
 - [클래스별 평가 지표](docs/results/yolo11n_20261105/per_class_metrics.csv)
 - [Confidence 5종 비교와 저성능 클래스 원인 분석](docs/RECALL_ANALYSIS.md)
 - [라벨 QA 설계 제안](docs/DATA_QA_DESIGN.md)
